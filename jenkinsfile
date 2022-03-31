@@ -1,0 +1,35 @@
+pipeline {
+    agent any
+
+
+    stages {
+        stage("Stage 1") {
+            steps {
+                script {
+
+                    env.BAR = "bar"
+					echo "${BAR}"
+                }
+            }
+        }
+
+        stage("Stage 2") {
+            steps {
+                script {
+                    echo "${BAR}"
+                    env.BAR = "bar2"
+					echo "${BAR}"
+					sh '''
+					ABC="wxs"
+					DJSD=echo"${ABC}"
+					
+					'''
+					
+					
+                }
+            }
+        }
+
+        
+    }
+}
