@@ -7,7 +7,7 @@ pipeline {
             steps {
                 script {
 
-                    env.BAR = "bar"
+                    env.BAR = "sub_multi1"
 					echo "${BAR}"
                 }
             }
@@ -17,7 +17,7 @@ pipeline {
             steps {
                 script {
                     echo "${BAR}"
-                    env.BAR = "bar2"
+                    env.BAR = "sub_multi1"
 					echo "${BAR}"
 					sh '''
 					ABC="wxs"
